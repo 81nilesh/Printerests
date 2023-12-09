@@ -20,7 +20,7 @@ app.use(expressSession({
   saveUninitialized: false,
   secret: "hey hey hey"
 }))
-app.use(passport.saveUninitialized());
+app.use(passport.initialize());
 app.use(passport.session());
 passport.serializeUser(usersRouter.serializeUser());
 passport.deserializeUser(usersRouter.deserializeUser());
