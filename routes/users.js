@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const plm = require("passport-local-mongoose");
 mongoose.connect("mongodb://127.0.0.1:27017/Printerest");
 
 const userSchema = new mongoose.Schema({
@@ -30,6 +30,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model('User', userSchema);
+userSchema.plugin(plm);
 
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);
+
