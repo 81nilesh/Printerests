@@ -14,12 +14,16 @@
       <!--pinterest logo-->
       <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"
         class="img1" />
-      <p class="header">Log in to see more</p>
+      <p class="header">Make Account to see more</p>
+      <form action="/register" method="post">
+        <input type="email" name="email" placeholder="Email" class="detail" /><br />
+        <input type="text" name="username" placeholder="username" class="detail" /><br />
+        <input type="text" name="fullname" placeholder="Full Name" class="detail" /><br />
+        <input type="password" name="password" placeholder="Password" class="detail" />
+        <input type="submit" class="btn int" value="Register Account">
+      </form>
 
-      <input type="email" placeholder="Email" class="detail" /><br />
-      <input type="password" placeholder="Password" class="detail" />
-
-      <h4>Forgot your password?</h4>
+      <a href="/forgot">Forgot your password?</a>
 
       <button class="btn int">Log in</button>
       <p class="or">OR</p>
@@ -37,11 +41,11 @@
           <b>Terms of Service, Privacy policy.</b>
         </p>
         <hr />
-        <p>Not on Pinterest yet? Sign up</p>
+        <a href="/login">Already on Pinterest yet? Login</a>
       </footer>
+
     </div>
   </div>
-  <div class="upbtn">Sign up</div>
 </body>
 
 </html>
